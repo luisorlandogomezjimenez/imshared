@@ -1,3 +1,12 @@
 node_modules/
 keys.js
 notes.txt
+
+# uploads folder
+uploads
+
+# environment variables
+.env
+
+## Dist
+dist
