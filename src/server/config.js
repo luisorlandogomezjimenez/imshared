@@ -11,7 +11,7 @@ const routes = require("../routes/index");
 module.exports = (app) => {
   //Settings
   app.set("port", process.env.PORT || 3000);
-  app.set("views", path.join(__dirname, "views"));
+  app.set("views", path.join(__dirname, "../views"));
   app.engine(
     ".hbs",
     exphbs({
@@ -38,8 +38,8 @@ module.exports = (app) => {
   //static files
   app.use("/public", express.static(path.join(__dirname, "../public")));
   //errorhandlers
-  // if ("development" === app.get("env")) {
-  //   app.use(errorHandler);
-  // }
+  if ("development" === app.get("env")) {
+    app.use(errorHandler);
+  }
   return app;
 };
