@@ -4,7 +4,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>imshared</title>
+    {{! Font Awesome }}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     {{! Bootstrap 4 }}
+
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -12,16 +18,29 @@
       crossorigin="anonymous"
     />
     {{! Custom CSS }}
-    <link rel="stylesheet" href="/src/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
   </head>
   <body>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container">
         <a href="/" class="navbar-brand">
-          <img src="/src/public/img/imshared.png" alt="logo" />
+          <img src="/public/img/imshared.png" alt="logo" />
         </a>
       </div>
     </nav>
-    {{{body}}}
+
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-md-8">
+          {{{body}}}
+        </div>
+
+        <div class="col-md-4">
+
+        </div>
+      </div>
+
+    </div>
+
   </body>
 </html>
