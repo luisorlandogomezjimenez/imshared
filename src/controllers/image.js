@@ -6,7 +6,12 @@ const { Image } = require("../models/index");
 
 ctrl = {};
 
-ctrl.index = (req, res) => {};
+ctrl.index = async (req, res) => {
+  const image = await Image.findOne({ filename: req.params.image_id });
+  console.log(image);
+
+  res.render("image");
+};
 
 ctrl.create = (req, res) => {
   const saveImage = async () => {
@@ -25,7 +30,7 @@ ctrl.create = (req, res) => {
         ext === ".jpeg" ||
         ext === ".gif"
       ) {
-        await fs.rename(imageTempPath, targetPath);
+        await fs.moveSync(imageTempPath, targetPath);
 
         const newImg = new Image({
           title: req.body.title,

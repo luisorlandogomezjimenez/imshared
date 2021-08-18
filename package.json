@@ -5,8 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "abbrev": "^1.1.1",
-    "ansi-regex": "^5.0.0",
     "ansi-align": "^3.0.0",
+    "ansi-regex": "^5.0.0",
     "ansi-styles": "^4.3.0",
     "anymatch": "^3.1.2",
     "binary-extensions": "^2.2.0",
@@ -106,7 +106,9 @@
     "write-file-atomic": "^3.0.3",
     "xdg-basedir": "^4.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.5"
+  },
   "scripts": {
     "dev": "nodemon src/index.js"
   },
